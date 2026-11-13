@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial - Water Pollution DLO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EBF8FF;
+      --primary: #0B4F6C;
+      --teal: #00A896;
+      --amber: #F59E0B;
+      --card: #FFFFFF;
+      --text: #1E293B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .brand { font-family: 'Fredoka', sans-serif; font-size: 1.15rem; font-weight: 600; }
+    nav { display: flex; gap: 8px; }
+    nav a {
+      color: #E2E8F0;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+    nav a.active { background: var(--teal); color: #fff; font-weight: 600; }
+
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 1.1fr 0.95fr;
+      gap: 18px;
+      padding: 16px 28px 18px;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .col-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: 0 6px 18px rgba(11,79,108,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .col-head {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.12rem;
+      color: var(--primary);
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .story-box {
+      background: #F8FAFC;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.87rem;
+      line-height: 1.62;
+      color: #334155;
+      flex: 1;
+    }
+    .story-title { font-family: 'Fredoka', sans-serif; color: var(--primary); font-size: 1rem; margin-bottom: 6px; }
+    .conj {
+      background: #CCFBF1;
+      color: #0F766E;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 6px;
+    }
+    .audio-bar {
+      margin-top: 10px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 12px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .play-btn {
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .audio-label { font-size: 0.78rem; color: #E2E8F0; }
+
+    .points-list { display: flex; flex-direction: column; gap: 8px; flex: 1; justify-content: center; }
+    .pt-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #F0F9FF;
+      padding: 8px 11px;
+      border-radius: 12px;
+      font-size: 0.83rem;
+      line-height: 1.35;
+    }
+    .pt-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+    .grammar-list { display: flex; flex-direction: column; gap: 10px; flex: 1; justify-content: center; }
+    .g-pill {
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 0.83rem;
+      line-height: 1.4;
+    }
+    .g-and { background: #DCFCE7; border-left: 5px solid #16A34A; }
+    .g-because { background: #FEF3C7; border-left: 5px solid #D97706; }
+    .g-but { background: #F3E8FF; border-left: 5px solid #9333EA; }
+    .g-pill strong { font-family: 'Fredoka', sans-serif; font-size: 0.95rem; display: block; margin-bottom: 2px; }
+
+    .next-btn {
+      display: block;
+      text-align: center;
+      background: var(--amber);
+      color: #fff;
+      font-family: 'Fredoka', sans-serif;
+      text-decoration: none;
+      padding: 9px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">💧 Water Pollution DLO</div>
+    <nav>
+      <a href="main-menu.html">Main Menu</a>
+      <a href="menu.html">Menu</a>
+      <a href="tutorial.html" class="active">Tutorial</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="activities.html">Activities</a>
+      <a href="closing.html">Closing</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Column 1: Reading & Audio -->
+    <section class="col-card">
+      <div>
+        <div class="col-head">📖 1. Read & Listen (15 Mins)</div>
+        <div class="story-box">
+          <div class="story-title">Story: The Sad River</div>
+          <p id="storyText">
+            Sungai Mutiara was clean, <span class="conj">and</span> many fish lived happily in the water. Soon, people threw plastic rubbish into the drains. Factories also dumped toxic waste into the river. Many fish died <span class="conj">because</span> the water was poisoned. The villagers felt sad, <span class="conj">but</span> they worked together to clean the river again.
+          </p>
+        </div>
+      </div>
+      <div class="audio-bar">
+        <button class="play-btn" id="audioBtn" onclick="toggleRead()">▶ Listen Aloud</button>
+        <span class="audio-label" id="audioStatus">Click to hear teacher read</span>
+      </div>
+    </section>
+
+    <!-- Column 2: 5 Key Points -->
+    <section class="col-card">
+      <div class="col-head">🔍 2. 5 Key Points (15 Mins)</div>
+      <div class="points-list">
+        <div class="pt-item"><span class="pt-icon">🗑️</span><div><strong>Drain Litter:</strong> Rubbish thrown in drains flows straight into rivers.</div></div>
+        <div class="pt-item"><span class="pt-icon">🏭</span><div><strong>Factory Waste:</strong> Toxic chemicals from factories poison river water.</div></div>
+        <div class="pt-item"><span class="pt-icon">🐟</span><div><strong>Aquatic Harm:</strong> Fish and water plants die in dirty, polluted water.</div></div>
+        <div class="pt-item"><span class="pt-icon">🚰</span><div><strong>Unsafe Water:</strong> Polluted water carries germs and is unsafe to drink.</div></div>
+        <div class="pt-item"><span class="pt-icon">♻️</span><div><strong>River Rescue:</strong> Recycling and clean-ups keep our rivers clean.</div></div>
+      </div>
+    </section>
+
+    <!-- Column 3: Grammar -->
+    <section class="col-card">
+      <div>
+        <div class="col-head">🔗 3. Compound Sentences</div>
+        <div class="grammar-list">
+          <div class="g-pill g-and">
+            <strong>and (Joins similar ideas)</strong>
+            Ali <u>and</u> Abu cleaned the riverbank.
+          </div>
+          <div class="g-pill g-because">
+            <strong>because (Gives a reason)</strong>
+            The fish died <u>because</u> the water was dirty.
+          </div>
+          <div class="g-pill g-but">
+            <strong>but (Shows contrast)</strong>
+            The water looks clear, <u>but</u> it has harmful chemicals.
+          </div>
+        </div>
+      </div>
+      <a href="quiz.html" class="next-btn">Next: Take the Quiz ➔</a>
+    </section>
+  </main>
+
+  <script>
+    let speaking = false;
+    function toggleRead() {
+      if (!('speechSynthesis' in window)) return;
+      const btn = document.getElementById('audioBtn');
+      const status = document.getElementById('audioStatus');
+      if (speaking) {
+        window.speechSynthesis.cancel();
+        speaking = false;
+        btn.textContent = '▶ Listen Aloud';
+        status.textContent = 'Stopped';
+      } else {
+        const text = document.getElementById('storyText').innerText;
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.rate = 0.92;
+        utter.onend = () => {
+          speaking = false;
+          btn.textContent = '▶ Listen Aloud';
+          status.textContent = 'Finished reading';
+        };
+        window.speechSynthesis.speak(utter);
+        speaking = true;
+        btn.textContent = '⏹ Stop';
+        status.textContent = 'Reading passage...';
+      }
+    }
+  </script>
+</body>
+</html>
