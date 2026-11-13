@@ -10,7 +10,6 @@
       --bg: #EBF8FF;
       --primary: #0B4F6C;
       --teal: #00A896;
-      --amber: #F59E0B;
       --card: #FFFFFF;
       --text: #1E293B;
     }
@@ -24,33 +23,12 @@
       display: flex;
       flex-direction: column;
     }
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 10px 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-shrink: 0;
-    }
-    .brand { font-family: 'Fredoka', sans-serif; font-size: 1.15rem; font-weight: 600; }
-    nav { display: flex; gap: 8px; }
-    nav a {
-      color: #E2E8F0;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 999px;
-    }
-    nav a.active { background: var(--teal); color: #fff; font-weight: 600; }
-
     main {
       flex: 1;
       display: grid;
       grid-template-columns: 1.05fr 1.1fr 0.95fr;
-      gap: 18px;
-      padding: 16px 28px 18px;
+      gap: 20px;
+      padding: 22px 32px;
       max-width: 1440px;
       width: 100%;
       margin: 0 auto;
@@ -58,7 +36,7 @@
     .col-card {
       background: var(--card);
       border-radius: 18px;
-      padding: 16px 18px;
+      padding: 18px 20px;
       box-shadow: 0 6px 18px rgba(11,79,108,0.08);
       display: flex;
       flex-direction: column;
@@ -66,35 +44,38 @@
     }
     .col-head {
       font-family: 'Fredoka', sans-serif;
-      font-size: 1.12rem;
+      font-size: 1.18rem;
       color: var(--primary);
       border-bottom: 2px solid #E2E8F0;
-      padding-bottom: 8px;
-      margin-bottom: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
     }
     .story-box {
       background: #F8FAFC;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 0.87rem;
-      line-height: 1.62;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 0.92rem;
+      line-height: 1.72;
       color: #334155;
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    .story-title { font-family: 'Fredoka', sans-serif; color: var(--primary); font-size: 1rem; margin-bottom: 6px; }
+    .story-title { font-family: 'Fredoka', sans-serif; color: var(--primary); font-size: 1.08rem; margin-bottom: 8px; }
     .conj {
       background: #CCFBF1;
       color: #0F766E;
       font-weight: 700;
-      padding: 1px 6px;
+      padding: 2px 7px;
       border-radius: 6px;
     }
     .audio-bar {
-      margin-top: 10px;
+      margin-top: 12px;
       background: var(--primary);
       color: #fff;
       border-radius: 12px;
-      padding: 8px 12px;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -104,70 +85,50 @@
       background: var(--teal);
       color: #fff;
       border: none;
-      padding: 6px 14px;
+      padding: 7px 16px;
       border-radius: 999px;
       font-family: 'Fredoka', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       cursor: pointer;
     }
-    .audio-label { font-size: 0.78rem; color: #E2E8F0; }
+    .audio-label { font-size: 0.8rem; color: #E2E8F0; }
 
-    .points-list { display: flex; flex-direction: column; gap: 8px; flex: 1; justify-content: center; }
+    .points-list { display: flex; flex-direction: column; gap: 10px; flex: 1; justify-content: space-between; }
     .pt-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       background: #F0F9FF;
-      padding: 8px 11px;
+      padding: 10px 13px;
       border-radius: 12px;
-      font-size: 0.83rem;
-      line-height: 1.35;
-    }
-    .pt-icon { font-size: 1.3rem; flex-shrink: 0; }
-
-    .grammar-list { display: flex; flex-direction: column; gap: 10px; flex: 1; justify-content: center; }
-    .g-pill {
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-size: 0.83rem;
+      font-size: 0.86rem;
       line-height: 1.4;
+      flex: 1;
+    }
+    .pt-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+    .grammar-list { display: flex; flex-direction: column; gap: 12px; flex: 1; justify-content: space-between; }
+    .g-pill {
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .g-and { background: #DCFCE7; border-left: 5px solid #16A34A; }
     .g-because { background: #FEF3C7; border-left: 5px solid #D97706; }
     .g-but { background: #F3E8FF; border-left: 5px solid #9333EA; }
-    .g-pill strong { font-family: 'Fredoka', sans-serif; font-size: 0.95rem; display: block; margin-bottom: 2px; }
-
-    .next-btn {
-      display: block;
-      text-align: center;
-      background: var(--amber);
-      color: #fff;
-      font-family: 'Fredoka', sans-serif;
-      text-decoration: none;
-      padding: 9px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      margin-top: 10px;
-    }
+    .g-pill strong { font-family: 'Fredoka', sans-serif; font-size: 1rem; display: block; margin-bottom: 4px; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="brand">💧 Water Pollution DLO</div>
-    <nav>
-      <a href="main-menu.html">Main Menu</a>
-      <a href="menu.html">Menu</a>
-      <a href="tutorial.html" class="active">Tutorial</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="activities.html">Activities</a>
-      <a href="closing.html">Closing</a>
-    </nav>
-  </header>
-
   <main>
     <!-- Column 1: Reading & Audio -->
     <section class="col-card">
-      <div>
+      <div style="display:flex; flex-direction:column; flex:1;">
         <div class="col-head">📖 1. Read & Listen (15 Mins)</div>
         <div class="story-box">
           <div class="story-title">Story: The Sad River</div>
@@ -196,24 +157,21 @@
 
     <!-- Column 3: Grammar -->
     <section class="col-card">
-      <div>
-        <div class="col-head">🔗 3. Compound Sentences</div>
-        <div class="grammar-list">
-          <div class="g-pill g-and">
-            <strong>and (Joins similar ideas)</strong>
-            Ali <u>and</u> Abu cleaned the riverbank.
-          </div>
-          <div class="g-pill g-because">
-            <strong>because (Gives a reason)</strong>
-            The fish died <u>because</u> the water was dirty.
-          </div>
-          <div class="g-pill g-but">
-            <strong>but (Shows contrast)</strong>
-            The water looks clear, <u>but</u> it has harmful chemicals.
-          </div>
+      <div class="col-head">🔗 3. Compound Sentences</div>
+      <div class="grammar-list">
+        <div class="g-pill g-and">
+          <strong>and (Joins similar ideas)</strong>
+          Ali <u>and</u> Abu cleaned the riverbank.
+        </div>
+        <div class="g-pill g-because">
+          <strong>because (Gives a reason)</strong>
+          The fish died <u>because</u> the water was dirty.
+        </div>
+        <div class="g-pill g-but">
+          <strong>but (Shows contrast)</strong>
+          The water looks clear, <u>but</u> it has harmful chemicals.
         </div>
       </div>
-      <a href="quiz.html" class="next-btn">Next: Take the Quiz ➔</a>
     </section>
   </main>
 
